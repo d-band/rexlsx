@@ -1,0 +1,70 @@
+{
+  "name": "rexlsx",
+  "version": "0.0.1",
+  "description": "Create excel documents with React",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint --ext .js src test",
+    "build": "rimraf lib && NODE_ENV=production babel src -d lib",
+    "prepublish": "npm run build",
+    "test": "NODE_ENV=test nyc mocha --no-timeouts",
+    "report": "nyc report --reporter=html",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-band/rexlsx.git"
+  },
+  "keywords": [
+    "better-xlsx",
+    "react",
+    "excel",
+    "fiber"
+  ],
+  "author": "d-band",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d-band/rexlsx/issues"
+  },
+  "homepage": "https://github.com/d-band/rexlsx#readme",
+  "dependencies": {
+    "better-xlsx": "^0.3.8"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0-beta.5",
+    "react-dom": "^16.0.0-beta.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-istanbul": "^4.1.4",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.1",
+    "coveralls": "^2.13.1",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0",
+    "pre-commit": "^1.2.2",
+    "react": "^16.0.0-beta.5",
+    "react-dom": "^16.0.0-beta.5",
+    "rimraf": "^2.6.1"
+  }
+}
