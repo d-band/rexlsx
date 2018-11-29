@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/d-band/rexlsx#readme",
   "dependencies": {
-    "better-xlsx": "^0.6.0"
+    "better-xlsx": "^0.7.2"
   },
   "peerDependencies": {
     "react": "^16.0.0-beta.5",
