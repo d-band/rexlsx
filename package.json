@@ -57,7 +57,7 @@
     "babel-register": "^6.26.0",
     "chai": "^4.1.1",
     "coveralls": "^3.0.0",
-    "eslint": "^4.5.0",
+    "eslint": "^6.5.0",
     "eslint-config-airbnb-base": "^12.0.0",
     "eslint-plugin-import": "^2.7.0",
     "mocha": "^5.0.0",
